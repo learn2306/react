@@ -7,7 +7,7 @@ const ProductAll = () => {
     const [productList, setProductList] = useState([]);
     const [query, setQuery] = useSearchParams();
     const getProducts = async() => {
-        let url = 'http://localhost:5000/products/'
+        //let url = 'http://localhost:5000/products/'
         //getProduct함수를 통해서 API를 호출할 때에 쿼리에 있는 값을 넣어줌
         let searchQuery=query.get('q')||"";
         //console.log(searchQuery)
@@ -16,7 +16,7 @@ const ProductAll = () => {
         //let url = `http://localhost:5000/products?q=${searchQuery}`
 
         //my-json-server에서 자료를 가져오기
-        //let url = `https://my-json-server.typicode.com/learn2306/react/products?q=${searchQuery}`
+        let url = `https://my-json-server.typicode.com/learn2306/react/products?q=${searchQuery}`
         let response = await fetch(url);
         let data = await response.json();
         //console.log(data)

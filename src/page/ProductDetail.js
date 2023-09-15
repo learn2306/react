@@ -8,8 +8,8 @@ const ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
     const getProductsDetail = async() => {
-        let url = `http://localhost:5000/products/${id}`
-        //let url = `https://my-json-server.typicode.com/learn2306/react/products/${id}`
+        //let url = `http://localhost:5000/products/${id}`
+        let url = `https://my-json-server.typicode.com/learn2306/react/products/${id}`
 
         let response = await fetch(url);
         let data = await response.json();
